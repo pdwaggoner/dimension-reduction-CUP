@@ -1,2 +1,4 @@
 # dimension-reduction-CUP
-Replication files for Cambridge Book "Nonparametric Dimension Reduction for High Dimensional Data"
+Replication files for "Nonparametric Dimension Reduction for High Dimensional Data"
+
+*Currently under contract with Cambridge University Press*
