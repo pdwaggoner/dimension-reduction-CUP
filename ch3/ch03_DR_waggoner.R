@@ -100,7 +100,7 @@ anes_scaled <- anes[, 1:35] %>%
   }
 
 # First, find optimal k (lle's version of a grid search)
-cores <- detectCores() - 1 # leave 1 core for regular processing
+cores <- detectCores() - 1 
 
 tic() 
 find_k <- calc_k(anes_scaled,
@@ -151,7 +151,7 @@ toc() # ~ 1.5 minutes on 3 cores; ~ 1.4 minutes on 7 cores
 }
 
 # full LLE viz
-lle_viz <- anes %>% # don't used scaled data here in order to have PID color
+lle_viz <- anes %>% 
   ggplot(aes(x = lle_fit$Y[,1], # scores for d1
              y = lle_fit$Y[,2], # scores for d2
              col = factor(democrat))) +
@@ -180,7 +180,7 @@ pca_fit <- anes[, 1:35] %>%
   prcomp()
 
 pca_viz <- anes %>% 
-  ggplot(aes(pca_fit$x[, 1], # `x` stores PC scores for all observations in the data
+  ggplot(aes(pca_fit$x[, 1], 
              pca_fit$x[, 2], 
              col = factor(democrat))) +
   geom_point() +
