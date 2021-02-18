@@ -1,4 +1,4 @@
-# Nonparametric Dimension Reduction for High Dimensional Data (Cambridge University Press)
+# Modern Dimension Reduction (Cambridge University Press)
 # Philip D. Waggoner, pdwaggoner@uchicago.edu
 
 # Section 2: Starting with PCA
