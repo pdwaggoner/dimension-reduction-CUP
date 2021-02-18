@@ -5,14 +5,19 @@
 
 
 # Packages needed for this section:
-install.packages(c("tidyverse", "here"))
+install.packages(c("tidyverse", "here", "skimr", "naniar", "recipes", "tictoc", "knitr"))
 
 # Load libraries
 library(tidyverse)
 library(here)
+library(skimr)
+library(naniar)
+library(recipes)
+library(tictoc)
+library(knitr)
 
 
-# Read in ANES 2019 Pilot data - emphasize benefit of using R projects to keep things organized, e.g., allowing for use of "here" package, like so...
+# Read in ANES 2019 Pilot data
 anes_start <- read_csv(here("Data", "anes_pilot_2019.csv"))
 
 ## FTs used (35 in total)
@@ -24,14 +29,6 @@ anes_start <- read_csv(here("Data", "anes_pilot_2019.csv"))
 #     ftfrance    ftcanada    ftturkey    ftrussia    ftpales   
 
 # Feature Engineering and Data Management
-
-
-# New packages/libraries
-library(skimr)
-library(naniar)
-library(recipes)
-library(tictoc)
-library(knitr)
 
 # Cleaning (4 main steps)
 anes_raw <- anes_start %>%
@@ -136,7 +133,7 @@ recipe <- recipe(democrat ~ .,
                  data = anes_raw) %>%
   step_knnimpute(all_predictors())
 
-# now, impute (note: wrap the few functions in brackets to run the full chunk at once)
+# now, impute
 { 
   tic()
   anes_imputed <- prep(recipe) %>% 
