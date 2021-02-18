@@ -5,7 +5,7 @@
 
 
 # Packages needed for this section:
-install.packages(c("tidyverse", "here", "amerika", "tictoc", "kohonen", "h2o", "doParallel"))
+install.packages(c("tidyverse", "here", "amerika", "tictoc", "kohonen", "h2o", "doParallel", "patchwork"))
 
 # Load libraries
 library(tidyverse)
@@ -13,6 +13,7 @@ library(here)
 library(amerika)
 library(tictoc)
 library(kohonen)
+library(patchwork)
 
 # First, read in cleaned and preprocessed 2019 ANES Pilot Data
 anes <- read_rds(here("Data", "anes.rds"))
