@@ -115,7 +115,7 @@ find_k %>%
   arrange(rho) # looks like k = 19 is optimal
 
 ## option 2: extracting via which.min()
-opt_k[which.min(find_k$rho), ] 
+find_k[which.min(find_k$rho), ] 
 
 # Regardless of the option, use dplyr's filter() to *extract* based on min \rho
 optimal_k_rho <- find_k %>% 
