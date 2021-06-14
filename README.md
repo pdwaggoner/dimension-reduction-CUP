@@ -6,4 +6,4 @@ Replication files for my book forthcoming with *Cambridge University Press*
 
 Full draft of the book available at the [arXiv](https://arxiv.org/abs/2103.06885).
 
-![](cvr.pdf)
+![](cvr.png)
