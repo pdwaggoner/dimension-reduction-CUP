@@ -2,7 +2,7 @@
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.4594352.svg)](https://doi.org/10.5281/zenodo.4594352)
 
-Replication files for my recent primer on a modern take on dimension reduction.
+Replication files for my recent primer covering a modern take on dimension reduction.
 
 ![](cvr.png)
 
